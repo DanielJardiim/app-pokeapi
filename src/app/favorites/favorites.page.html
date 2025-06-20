@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card
+    *ngFor="let pokemon of favorites"
+    (click)="goToDetails(pokemon.name)"
+    button
+  >
+    <img [src]="pokemon.sprites.front_default" alt="Imagem do Pokémon" />
+    <ion-card-header>
+      <ion-card-title>{{ pokemon.name | titlecase }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <p *ngIf="favorites.length === 0" style="text-align: center; padding: 1rem">
+    Nenhum Pokémon favoritado.
+  </p>
+</ion-content>
