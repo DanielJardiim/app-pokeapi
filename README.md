@@ -40,15 +40,15 @@ A codificação priorizou **simplicidade, clareza e escalabilidade**, com uso de
 
 2. Instale as dependências:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Rode o app:
 
-```bash
-npm run start
-```
+   ```bash
+   npm run start
+   ```
 
 ---
 
